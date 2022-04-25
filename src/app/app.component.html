@@ -1,0 +1,32 @@
+<h1>Attribute directives</h1>
+<h2>ngClass</h2>
+
+<!-- using static class name -->
+<div [ngClass]="'exOne'">
+  ngClass
+</div>
+
+<!-- using dynamic class name -->
+<!-- dynamic->sending value from component -->
+<!-- array class=> to pass more than 1 class- we use array -->
+<div [ngClass]="[className1,className2]">
+  ngClass
+</div>
+
+<!-- ngClass with expressions -->
+<div [ngClass]="{'exOne':true,'exTwo':false,'exThree':true}">
+  ngClass expressions
+</div>
+
+<h2>ngStyle</h2>
+<!-- basic->setting a value using ngStyle -->
+<div [ngStyle]="{'background-color':'black','color':'#fff'}">This is a div container</div><br>
+
+<div [ngStyle]="{'background-color':styleProperty}">This is dynamic div container</div><br>
+
+<!-- ngStyle with conitional operators -->
+<div [ngStyle]="{'color':txtColor==='error'?'red':'green'}">This is conditional div container</div><br>
+
+<h2>Two way binding</h2>
+<input type="text" [(ngModel)]="name"/>
+<p>{{name}}</p>
